@@ -1,0 +1,122 @@
+.main_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.form {
+  margin-top: 64px;
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+}
+
+.form input {
+  width: 100%;
+  height: 70px;
+  padding: 0 24px;
+  border: 0;
+  color: var(--black);
+  border: solid 2px var(--white);
+  border-right: 0;
+  background-color: var(--white);
+  order: 3;
+}
+
+.form button[type='submit'] {
+  width: 210px;
+  height: 70px;
+  background-color: var(--green_primary);
+  border-radius: 0 8px 8px 0;
+  border: 0;
+  color: var(--white);
+  font-weight: bold;
+  transition: background-color 0.2s;
+  order: 4;
+}
+
+.form button:hover {
+  background-color: var(--green_secondary);
+}
+
+.form select {
+  border: 0;
+  font-weight: bold;
+  padding: 0 8px;
+  background-color: var(--white);
+  color: var(--black);
+  order: 2;
+}
+
+.form button.btn_add_user {
+  width: 210px;
+  height: 70px;
+  background-color: var(--blue_primary);
+  border-radius: 8px 0px 0px 8px;
+  border: 0;
+  color: var(--white);
+  font-weight: bold;
+  transition: background-color 0.2s;
+  order: 1;
+}
+
+.form button.btn_add_user:hover {
+  background-color: var(--blue_secondary);
+}
+
+.container_users {
+  width: 100%;
+  max-width: 640px;
+}
+
+.container_users h3 {
+  margin: 24px 0;
+}
+
+.users_wrapper {
+  background-color: #e0e0e0;
+  max-height: 420px;
+  overflow: auto;
+}
+
+@media screen and (max-width: 480px) {
+  .main_container {
+    height: initial;
+  }
+  
+  .form {
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .form select {
+    order: 1;
+    height: 70px;
+    padding: 0 24px;
+    border-radius: 8px;
+  }
+
+  .form input {
+    order: 2;
+    border-radius: 8px;
+  }
+
+  .form button.btn_add_user {
+    order: 3;
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .form button[type='submit'] {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .container_users {
+    padding: 0 24px;
+  }
+}

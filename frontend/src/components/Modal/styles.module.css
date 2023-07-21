@@ -1,0 +1,110 @@
+fieldset {
+  all: unset
+}
+
+.dialog_overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialog_content {
+  background-color: var(--white);
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 450px;
+  max-height: 85vh;
+  padding: 25px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dialog_title {
+  margin: 0;
+  font-weight: 400;
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+.dialog_description {
+  margin: 16px 0;
+  color: var(--black);
+  font-size: 0.8rem;
+}
+
+.button {
+  height: 36px;
+  background-color: var(--green_primary);
+  border-radius: 8px;
+  border: 0;
+  color: var(--white);
+  font-weight: bold;
+  transition: background-color 0.2s;
+  padding: 0 16px;
+}
+
+.button:hover {
+  background-color: var(--green_secondary);
+}
+
+.icon_button {
+  border: 0;
+  height: 24px;
+  width: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: transparent;
+}
+
+.fieldset {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.label {
+  font-size: 1rem;
+  color: var(--black);
+}
+
+.input {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0 8px;
+  color: var(--black);
+  height: 36px;
+  border: 0;
+  background-color: transparent;
+  border: 1px solid var(--black);
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
